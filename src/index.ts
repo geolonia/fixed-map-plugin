@@ -1,4 +1,4 @@
-export const PLUGIN_STYLE_CLASSNAME = 'geolonia-plugin-tourlist-float'
+export const PLUGIN_STYLE_CLASSNAME = 'geolonia-plugin-tourlist-map'
 
 export const addCustomCSS = () => {
   const style = document.createElement('style')
@@ -14,17 +14,13 @@ export const addCustomCSS = () => {
   document.head.append(style)
 }
 
-export const renderGeoloniaMap = (id: string) => {
-  const mapContainer = document.getElementById(id)
+export const renderGeoloniaMap = (map: any, mapContainer: HTMLElement) => {
   let placeholderContainer: HTMLElement | null = null
 
   if (!mapContainer) {
     return
   }
   const defaultStyle = { ...window.getComputedStyle(mapContainer) }
-
-  // @ts-ignore
-  const map = new window.geolonia.Map(mapContainer)
 
   const mapObserver = new window.IntersectionObserver((entries) => {
     const { isIntersecting } = entries[0]
@@ -58,6 +54,9 @@ export const renderGeoloniaMap = (id: string) => {
   })
 }
 
-addCustomCSS()
-renderGeoloniaMap('map')
+// @ts-ignore
+window.geolonia.registerPlugin((map, target) => {
+  addCustomCSS()
+  renderGeoloniaMap(map, target)
+})
 

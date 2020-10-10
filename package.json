@@ -1,11 +1,11 @@
 {
-  "name": "geolonia-plugin-tourist",
+  "name": "geolonia-plugin-fixed-map",
   "version": "1.0.0",
   "main": "index.js",
   "author": "kamataryo <kamataryo@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p",
+    "build": "rimraf ./dist ./docs && webpack -p && mkdir -p ./dist && cp ./docs/bundle.js ./dist/geolonia-plugin-fixed-map.min.js",
     "start": "webpack-dev-server"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "copy-webpack-plugin": "^6.2.1",
     "html-webpack-plugin": "^4.5.0",
     "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
     "ts-loader": "^8.0.4",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3",
