@@ -26,10 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build
-      - run: npm run lint
-      - run: npm test
-      # allow fails
-      # - run: npm run test:addresses || true
+      # - run: npm test
 
   publish:
     name: 'Publish npm package'
@@ -50,3 +47,9 @@ jobs:
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+
