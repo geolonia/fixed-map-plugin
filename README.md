@@ -12,7 +12,7 @@ Fixed Map Geolonia Plugin は、 Geolonia [Embed API](https://docs.geolonia.com/
 <body>
   <div class="geolonia"></div>
   <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY" />
-  <script src="https://kamataryo.github.io/fixed-map-geolonia-plugin/fixed-map-geolonia-plugin.min.js" />
+  <script src="https://geolonia.github.io/fixed-map-geolonia-plugin/fixed-map-geolonia-plugin.min.js" />
 </body>
 ```
 
@@ -37,7 +37,7 @@ Issue、プルリクエストはいつでも歓迎します。
 以下のコマンドで開発用サーバーを立ち上げることができます。
 
 ```shell
-$ git clone git@github.com:kamataryo/fixed-map-geolonia-plugin.git
+$ git clone git@github.com:geolonia/fixed-map-geolonia-plugin.git
 $ cd fixed-map-geolonia-plugin
 $ yarn # または npm install
 $ npm start
