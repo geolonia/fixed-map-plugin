@@ -6,8 +6,6 @@
   <title>Embed API | Fixed Map Geolonia Plugin</title>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/default.min.css">
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 
   <style>
     main {
@@ -38,6 +36,8 @@
     }
     .github-fork-ribbon {
       position: fixed;
+      right: 0;
+      top: 0;
     }
     .geolonia {
       width: 100%;
@@ -71,6 +71,7 @@
     画面のスクロールによって地図が隠れると、固定表示に切り替わります。<br />
     このままドキュメントをスクロールしてみてください。
   </p>
+  <img src="./images/tokyo.jpg" alt="just a placeholder">
   <img src="./images/origin.jpg" alt="just a placeholder">
   <p>
     ここまでスクロールした方は、地図が右下に固定されているのが見えるはずです。
@@ -95,8 +96,15 @@
   <p>
     Issue、プルリクエストはいつでも歓迎します。<br />
     以下のコマンドで開発用サーバーを立ち上げることができます。
-    <a class="github-fork-ribbon" href="https://github.com/kamataryo/fixed-map-geolonia-plugin" data-ribbon="Fork me on GitHub"
-      title="Fork me on GitHub">Fork me on GitHub</a>
+
+    <a class="github-fork-ribbon" href="https://github.com/kamataryo/fixed-map-geolonia-plugin">
+      <img
+        width="149"
+        height="149"
+        src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+        alt="Fork me on GitHub"
+      />
+    </a>
   </p>
 
   <pre><code class="bash">$ git clone git@github.com:kamataryo/fixed-map-geolonia-plugin.git
