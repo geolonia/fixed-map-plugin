@@ -1,6 +1,6 @@
 export const PLUGIN_STYLE_CLASSNAME = '__fixed-map-geolonia-plugin'
 export const PLUGIN_CUSTOMIZAER_CLASSNAMES = ['fixed', 'geolonia-map-fixed']
-
+export const INTERSECTION_ROOT_MARGIN = '10px 10px 10px 10px'
 
 export const addCustomCSS = () => {
   const style = document.createElement('style')
@@ -34,7 +34,7 @@ const observeContainer = (map: any, mapContainer: HTMLElement) => {
       mapContainer.classList.remove(PLUGIN_STYLE_CLASSNAME, ...PLUGIN_CUSTOMIZAER_CLASSNAMES)
       map.resize()
     }
-  })
+  }, { rootMargin: INTERSECTION_ROOT_MARGIN })
 
   const mapObserver = new window.IntersectionObserver((entries) => {
     const { isIntersecting } = entries[0]
@@ -52,7 +52,7 @@ const observeContainer = (map: any, mapContainer: HTMLElement) => {
         placeholderObserver.observe(placeholderContainer)
       }
     }
-  })
+  }, { rootMargin: INTERSECTION_ROOT_MARGIN })
 
   mapObserver.observe(mapContainer)
 

@@ -25,7 +25,6 @@ const config: webpack.Configuration = {
     new CopyWebpackPlugin({
       patterns: [
         { from: path.join(assets, 'images'), to: path.join(docs, 'images') },
-        { from: path.join(assets, 'geojsons'), to: path.join(docs, 'geojsons') }
       ]
     }),
   ],

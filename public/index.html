@@ -3,51 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geolonia Plugin Tourist</title>
+  <title>Embed API | Fixed Map Geolonia Plugin</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/default.min.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
   <style>
-    body {
-      max-width: 840px;
+    main {
+      max-width: 640px;
       margin: auto;
       padding: 15px;
     }
-.geolonia.geolonia-map-fixed {
-  right: 0;
-  top: 0;
-}
+    footer {
+      border-top: 1px solid gray;
+    }
+    img {
+      max-width: 100%;
+    }
+    code.inline {
+      background-color: #f0f0f0;
+      color: darkred;
+      padding: 2px 5px 1px;
+      border-radius: 2px;
+    }
+    .copy-right {
+      text-align: center;
+      font-size: .8em;
+      color: #0d0d0d;
+    }
+    .links a {
+      font-size: .9em;
+      color: #0d0d0d;
+    }
+    .github-fork-ribbon {
+      position: fixed;
+    }
+    .geolonia {
+      width: 100%;
+      height: 300px;
+      margin: 10px auto 10px;
+    }
   </style>
 </head>
 <body>
-  <h1>Embed API | Fixed Map Geolonia Plugin</h1>
+  <main>
+  <h1>Fixed Map Geolonia Plugin</h1>
   <p>
-    Fixed Map Geolonia Plugin は Geolonia Embed API のプラグインとして動作します。
+    Fixed Map Geolonia Plugin は、 Geolonia <a href="https://docs.geolonia.com/embed-api/">Embed API</a> のプラグインとして動作します。
+    以下のように Embed API と一緒にスクリプトを読み込んでください。
   </p>
-  <img src="./images/01.jpg" alt="">
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis beatae nemo fugiat omnis reiciendis suscipit iste et temporibus recusandae provident! Ad doloribus, consequuntur nesciunt, eaque architecto facilis a dignissimos at enim illum atque modi ipsa distinctio omnis velit aut rerum nisi fuga praesentium eveniet! Eum vitae natus cupiditate, sequi voluptas incidunt, temporibus modi delectus explicabo fugit a possimus repellat quos. Quia ullam distinctio repellat dignissimos repellendus magnam est velit placeat? Doloremque dolor doloribus aliquid dolores voluptas deserunt ipsum harum, non quis inventore voluptate cumque voluptatum beatae labore praesentium animi. Cupiditate iste architecto repellat suscipit? Velit rem fugiat ut tempora repellat!</p>
 
-  <div class="geolonia" data-geojson="./geojsons/trace.geojson"></div>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id sapiente dolores hic totam fugit corporis doloribus eos quo asperiores, quam nulla tempora, eaque maxime ut necessitatibus reiciendis. Sed, ipsa aperiam!</p>
-  <div class="images">
-    <img src="./images/02.jpg" alt="">
-    <img src="./images/03.jpg" alt="">
-    <img src="./images/04.jpg" alt="">
-  </div>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis dolorem quae mollitia quidem reprehenderit quisquam eius, ducimus nemo, pariatur deserunt culpa inventore eum enim vitae veniam dolores. Facere, enim.</p>
-  <div class="figures">
-    <figure>
-      <figcaption>cap 1</figcaption>
-      <img src="./images/05.jpg" alt="">
-    </figure>
-    <figure>
-      <figcaption>cap 2</figcaption>
-      <img src="./images/06.jpg" alt="">
-    </figure>
-  </div>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa fuga nam voluptatem deserunt assumenda voluptatum saepe ex? Commodi voluptatem assumenda nesciunt, voluptatum magni neque quos, nobis non praesentium tenetur vero.</p>
-    <div class="images">
-      <img src="./images/07.jpg" alt="">
-      <img src="./images/08.jpg" alt="">
-      <img src="./images/09.jpg" alt="">
-    </div>
+  <pre><code class="html">&lt;body&gt;
+  &lt;div class=&quot;geolonia&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY&quot; /&gt;
+  &lt;script src=&quot;https://kamataryo.github.io/fixed-map-geolonia-plugin/fixed-map-geolonia-plugin.min.js&quot; /&gt;
+&lt;/body&gt;</code></pre>
+
+  <div
+    class="geolonia"
+    data-lat="35.65810422222222"
+    data-lng="139.74135747222223"
+    data-zoom="9"
+  ></div>
+
+  <p>
+    画面のスクロールによって地図が隠れると、固定表示に切り替わります。<br />
+    このままドキュメントをスクロールしてみてください。
+  </p>
+  <img src="./images/origin.jpg" alt="just a placeholder">
+  <p>
+    ここまでスクロールした方は、地図が右下に固定されているのが見えるはずです。
+  </p>
+  <h2>カスタマイズ</h2>
+
+  <code class="inline">fixed</code> クラス、または <code class="inline">geolonia-map-fixed</code> クラスを使って CSS
+  を上書きすることで、固定マップのスタイルを変更できます。
+
+  <pre><code class="css">/* 固定位置を左上に変更 */
+.geolonia.fixed {
+  left: 10px;
+  top: 10px;
+}</code></pre>
+  <pre><code class="css">/* 固定位置を右上に変更 */
+.geolonia.geolonia-map-fixed {
+  right: 10px;
+  top: 10px;
+}</code></pre>
+
+  <h2>コントリビューション</h2>
+  <p>
+    Issue、プルリクエストはいつでも歓迎します。<br />
+    以下のコマンドで開発用サーバーを立ち上げることができます。
+    <a class="github-fork-ribbon" href="https://github.com/kamataryo/fixed-map-geolonia-plugin" data-ribbon="Fork me on GitHub"
+      title="Fork me on GitHub">Fork me on GitHub</a>
+  </p>
+
+  <pre><code class="bash">$ git clone git@github.com:kamataryo/fixed-map-geolonia-plugin.git
+$ cd fixed-map-geolonia-plugin
+$ yarn # または npm install
+$ npm start</code></pre>
+
+  </main>
+
+  <footer>
+    <p class="copy-right">© 2020 Geolonia. Some rights reserved.</p>
+    <ul class="links">
+      <li><a href="https://geolonia.com">Geolonia</a></li>
+      <li><a href="https://docs.geolonia.com">Geolonia ドキュメント</a></li>
+      <li><a href="https://blog.geolonia.com">Geolonia 公式ブログ</a></li>
+    </ul>
+  </footer>
+
+  <script>hljs.initHighlightingOnLoad();</script>
   <script src="https://cdn.geolonia.com/dev/embed?geolonia-api-key=YOUR-API-KEY"></script>
 </body>
 </html>
