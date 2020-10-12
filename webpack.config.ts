@@ -32,7 +32,7 @@ const config: webpack.Configuration = {
   devtool: 'source-map',
   output: {
     path: docs,
-    filename: "bundle.js",
+    filename: "fixed-map-geolonia-plugin.min.js",
   },
   devServer: {
     contentBase: docs,

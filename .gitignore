@@ -65,3 +65,6 @@ typings/
 dist
 docs
 .DS_Store
+
+# Use yarn
+package-lock.json

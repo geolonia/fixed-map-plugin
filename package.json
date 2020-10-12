@@ -1,11 +1,11 @@
 {
-  "name": "geolonia-plugin-fixed-map",
+  "name": "@geolonia/fixed-map-plugin",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/geolonia-plugin-fixed-map.min.js",
   "author": "kamataryo <kamataryo@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf ./dist ./docs && webpack -p && mkdir -p ./dist && cp ./docs/bundle.js ./dist/geolonia-plugin-fixed-map.min.js",
+    "build": "rimraf ./dist ./docs && webpack -p && mkdir -p ./dist && cp ./docs/fixed-map-geolonia-plugin.min.js ./dist/",
     "start": "webpack-dev-server"
   },
   "devDependencies": {
