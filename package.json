@@ -1,6 +1,6 @@
 {
   "name": "@geolonia/fixed-map-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/geolonia-plugin-fixed-map.min.js",
   "author": "kamataryo <kamataryo@users.noreply.github.com>",
   "license": "MIT",
