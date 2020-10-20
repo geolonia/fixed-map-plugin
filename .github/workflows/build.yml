@@ -38,7 +38,6 @@ jobs:
           path: |
             dist/
             docs/
-            node_modules/
 
   publish:
     name: 'Publish npm package'
