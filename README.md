@@ -1,7 +1,7 @@
 # Fixed Map Geolonia Plugin
 
 地図を固定表示する Geolonia プラグインです。
-このプラグインを適用すると地図が固定され、スクロールしても地図が画面に表示され続けるようになります。
+このプラグインを適用すると地図が画面の一部に固定され、スクロールしても地図が表示され続けるようになります。
 
 DEMO: https://geolonia.github.io/fixed-map-geolonia-plugin/
 
