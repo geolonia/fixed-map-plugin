@@ -1,9 +1,13 @@
 {
   "name": "@geolonia/fixed-map-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/fixed-map-geolonia-plugin.min.js",
   "description": "Geolonia Embed API plugin to fix your map.",
-  "keywords": ["map", "location", "plugin"],
+  "keywords": [
+    "map",
+    "location",
+    "plugin"
+  ],
   "author": "kamataryo <kamataryo@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
