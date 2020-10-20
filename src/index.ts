@@ -1,3 +1,5 @@
+import * as Geolonia from '@geolonia/embed'
+
 export const PLUGIN_STYLE_CLASSNAME = '__fixed-map-geolonia-plugin'
 export const PLUGIN_CUSTOMIZAER_CLASSNAMES = ['fixed', 'geolonia-map-fixed']
 export const INTERSECTION_ROOT_MARGIN = '10px 10px 10px 10px'
@@ -65,7 +67,7 @@ const observeContainer = (map: any, mapContainer: HTMLElement) => {
 // disallow multiple maps
 let oncePluginLoaded = false
 
-const FixedMapGeoloniaPlugin = (map: any, target: HTMLElement) => {
+const FixedMapGeoloniaPlugin: Geolonia.EmbedPlugin = (map, target) => {
   if (!oncePluginLoaded) {
     addCustomCSS()
     observeContainer(map, target)
@@ -73,5 +75,4 @@ const FixedMapGeoloniaPlugin = (map: any, target: HTMLElement) => {
   }
 }
 
-// @ts-ignore
 window.geolonia.registerPlugin(FixedMapGeoloniaPlugin)
