@@ -14,7 +14,7 @@ Fixed Map Geolonia Plugin は、 Geolonia [Embed API](https://docs.geolonia.com/
 <body>
   <div class="geolonia"></div>
   <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY" />
-  <script src="https://geolonia.github.io/fixed-map-geolonia-plugin/fixed-map-geolonia-plugin.min.js" />
+  <script src="https://cdn.geolonia.com/v1/fixed-map-plugin@latest" />
 </body>
 ```
 
