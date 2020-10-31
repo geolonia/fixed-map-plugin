@@ -36,7 +36,7 @@
     }</style></head><body><main><h1>Fixed Map Geolonia Plugin</h1><p>Fixed Map Geolonia Plugin は、 Geolonia <a href="https://docs.geolonia.com/embed-api/">Embed API</a> のプラグインとして動作します。 以下のように Embed API と一緒にスクリプトを読み込んでください。</p><pre><code class="html">&lt;body&gt;
   &lt;div class=&quot;geolonia&quot;&gt;&lt;/div&gt;
   &lt;script src=&quot;https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY&quot; /&gt;
-  &lt;script src=&quot;https://geolonia.github.io/fixed-map-geolonia-plugin/fixed-map-geolonia-plugin.min.js&quot; /&gt;
+  &lt;script src=&quot;https://cdn.geolonia.com/v1/fixed-map-plugin@latest&quot; /&gt;
 &lt;/body&gt;</code></pre><div class="geolonia" data-lat="35.65810422222222" data-lng="139.74135747222223" data-zoom="9"></div><p>画面のスクロールによって地図が隠れると、固定表示に切り替わります。<br/>このままドキュメントをスクロールしてみてください。</p><img src="./images/tokyo.jpg" alt="just a placeholder"> <img src="./images/origin.jpg" alt="just a placeholder"><p>ここまでスクロールした方は、地図が右下に固定されているのが見えるはずです。</p><h2>カスタマイズ</h2><code class="inline">fixed</code> クラス、または <code class="inline">geolonia-map-fixed</code> クラスを使って CSS を上書きすることで、固定マップのスタイルを変更できます。<pre><code class="css">/* 固定位置を左上に変更 */
 .geolonia.fixed {
   left: 10px;
