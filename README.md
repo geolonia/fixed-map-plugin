@@ -39,8 +39,8 @@ Issue、プルリクエストはいつでも歓迎します。
 以下のコマンドで開発用サーバーを立ち上げることができます。
 
 ```shell
-$ git clone git@github.com:geolonia/fixed-map-geolonia-plugin.git
-$ cd fixed-map-geolonia-plugin
+$ git clone git@github.com:geolonia/fixed-map-plugin.git
+$ cd fixed-map-plugin
 $ yarn # または npm install
 $ npm start
 ```
