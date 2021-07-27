@@ -8,7 +8,6 @@
     "location",
     "plugin"
   ],
-  "author": "kamataryo <kamataryo@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
     "build": "rimraf ./dist ./docs && webpack -p && mkdir -p ./dist && cp ./docs/*.js ./dist/ && cp ./docs/*.js.map ./dist/",
